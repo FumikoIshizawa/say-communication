@@ -3,14 +3,15 @@
 #とりあえずてすとこーど
 
 
-#menu
+#ここにご飯の発音を入れる
 menu_array=(
 "Hamburg"
+"wunagi"
 )
 
 #言わせる言葉
 KOTOBA="gohan no jikan death"
-KOTOBA=${menu_array[0]}
+KOTOBA=${menu_array[1]}
 #say `date +"%I"` 時 `date +"%M"` 分です
 
 #macのボリュームを0~7で指定
