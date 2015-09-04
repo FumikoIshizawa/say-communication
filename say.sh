@@ -2,20 +2,21 @@
 
 #とりあえずてすとこーど
 
+#メニューの配列をインポート
+source ./menu_array
 
-#ここにご飯の発音を入れる
-menu_array=(
-"Hamburg"
-"wunagi"
-)
+#ごはんの乱数
+menu_array_size=`expr ${#menu_array[*]} - 1`;
+menu_random_num=`jot -r 1 0 $menu_array_size`
 
 #言わせる言葉
-KOTOBA="gohan no jikan death"
-KOTOBA=${menu_array[1]}
+KOTOBA="gohan no z kkun death, ${menu_array[$menu_random_num]} tabeyo" 
+
+#今の時間言わせるsayコマンド
 #say `date +"%I"` 時 `date +"%M"` 分です
 
 #macのボリュームを0~7で指定
-osascript -e 'set Volume 2'
+osascript -e 'set Volume 4'
 
 #↓  alexがKOTOBAを言うところ
 say -v Alex $KOTOBA
