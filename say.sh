@@ -27,7 +27,7 @@ if test `date +"%H"` -eq `echo $TIME_GOHAN|cut -d":" -f1`;
       say -v $SPEAKER $KOTOBA2
       osascript -e 'set Volume 4'
       say -v $SPEAKER $KOTOBA3
-      URL="http://google.co.jp/search?q=${menu_array[$menu_random_num]}"
+      URL="http://google.co.jp/search?q=${menu_array_jp[$menu_random_num]}&tbm=isch"
       open -a /Applications/Google\ Chrome.app $URL
   fi
 fi
