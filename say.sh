@@ -1,11 +1,10 @@
 #!/bin/bash
-
+cd /Users/antibitch/Documents/job_hunting/internship/say-communication
 #今の時間言わせるsayコマンド
-#say `date +"%I"` 時 `date +"%M"` 分です
-
+#say `date +"%H"` 時 `date +"%M"` 分です
 
 #ごはん
-if test `date +"%I"` -eq 12;
+if test `date +"%H"` -eq 12;
   then
   if test `date +"%M"` -eq 00;
     then
@@ -26,7 +25,7 @@ if test `date +"%I"` -eq 12;
 fi
 
 #うなじ
-if test `date +"%I"` -eq 16;
+if test `date +"%H"` -eq 16;
   then
   if test `date +"%M"` -eq 00;
     then
@@ -38,7 +37,7 @@ fi
 
 #おはよう
 #10:00~10:59までにmacを開くとあいさつを行う
-if test `date +"%I"` -eq 10;
+if test `date +"%H"` -eq 14;
   then
   source ./hello_status
   if test $said_hello -eq 0;
@@ -46,10 +45,11 @@ if test `date +"%I"` -eq 10;
     say -v Alex hello
     echo said_hello=1 > ./hello_status
   fi
-then
+fi
+
 #おはようフラグをリセット
 #12:00におはようフラグをoff（0）にする
-if test `date +"%I"` -eq 12;
+if test `date +"%H"` -eq 12;
   then
   if test `date +"%M"` -eq 00;
     then
