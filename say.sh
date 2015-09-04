@@ -1,6 +1,6 @@
 #!/bin/bash
-cd /Users/antibitch/Documents/job_hunting/internship/say-communication
 #今の時間言わせるsayコマンド
+cd /Users/FumikoIshizawa/program/say-communication/say-communication
 #say `date +"%H"` 時 `date +"%M"` 分です
 
 #ごはん
@@ -21,6 +21,8 @@ if test `date +"%H"` -eq 12;
       say -v Alex $KOTOBA2
       osascript -e 'set Volume 4'
       say -v Alex $KOTOBA3
+      URL="http://google.co.jp/search?q=${menu_array[$menu_random_num]}"
+      open -a /Applications/Google\ Chrome.app $URL
   fi
 fi
 
