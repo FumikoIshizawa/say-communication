@@ -2,10 +2,16 @@
 
 #とりあえずてすとこーど
 
+
+#menu
+menu_array=(
+"Hamburg"
+)
+
 #言わせる言葉
 KOTOBA="gohan no jikan death"
-
-say `date +"%I"` 時 `date +"%M"` 分です
+KOTOBA=${menu_array[0]}
+#say `date +"%I"` 時 `date +"%M"` 分です
 
 #macのボリュームを0~7で指定
 osascript -e 'set Volume 4'
