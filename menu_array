@@ -7,3 +7,13 @@ menu_array=(
 "pasta"
 "yarkiniku"
 )
+
+menu_array_jp=(
+"ハンバーグ"
+"うなぎ"
+"寿司"
+"ピザ"
+"カレー"
+"パスタ"
+"焼き肉"
+)
