@@ -38,7 +38,7 @@ if test `date +"%H"` -eq `echo $TIME_UNAGI|cut -d":" -f1`;
   if test `date +"%M"` -eq `echo $TIME_UNAGI|cut -d":" -f2`;
     then
     say -v $SPEAKER This is wunagi time
-    say -v Lets play wunagi
+    say -v $SPEAKER Lets play wunagi
     open -a /Applications/Google\ Chrome.app http://eelslap.com/
   fi
 fi
@@ -50,7 +50,7 @@ if test `date +"%H"` -eq `echo $TIME_OHAYO|cut -d":" -f1`;
   source ./hello_status
   if test $said_hello -eq 0;
     then
-    say -v $SPEAKER hello
+    say -v $SPEAKER ohayo gozali mas
     echo said_hello=1 > ./hello_status
   fi
 fi
