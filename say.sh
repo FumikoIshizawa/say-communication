@@ -14,7 +14,7 @@ KOTOBA=${menu_array[0]}
 #say `date +"%I"` 時 `date +"%M"` 分です
 
 #macのボリュームを0~7で指定
-osascript -e 'set Volume 4'
+osascript -e 'set Volume 2'
 
 #↓  alexがKOTOBAを言うところ
 say -v Alex $KOTOBA
@@ -36,3 +36,13 @@ echo "aaaa";
 fi
 fi
 
+#うなじ
+if test `date +"%I"` -eq 13;
+then
+if test `date +"%M"` -eq 00;
+then
+say -v Alex This is wunagi time
+say -v Lets play wunagi
+open -a /Applications/Google\ Chrome.app http://eelslap.com/
+fi
+fi
