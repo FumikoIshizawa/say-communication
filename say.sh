@@ -5,10 +5,6 @@
 #メニューの配列をインポート
 source ./menu_array
 
-#ごはんの乱数
-menu_array_size=`expr ${#menu_array[*]} - 1`;
-menu_random_num=`jot -r 1 0 $menu_array_size`
-
 #言わせる言葉
 KOTOBA="gohan no z kkun death, ${menu_array[$menu_random_num]} tabeyo" 
 
@@ -39,7 +35,7 @@ fi
 fi
 
 #うなじ
-if test `date +"%I"` -eq 13;
+if test `date +"%I"` -eq 16;
 then
 if test `date +"%M"` -eq 00;
 then
