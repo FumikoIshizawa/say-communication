@@ -7,11 +7,6 @@
 menu_array=(
 "Hamburg"
 "wunagi"
-"sushi"
-"pizza"
-"curry"
-"pasta"
-"yarkiniku"
 )
 
 #言わせる言葉
@@ -43,9 +38,9 @@ fi
 fi
 
 #うなじ
-if test `date +"%I"` -eq 16;
+if test `date +"%I"` -eq 13;
 then
-if test `date +"%M"` -eq 00;
+if test `date +"%M"` -eq 02;
 then
 say -v Alex This is wunagi time
 say -v Lets play wunagi
