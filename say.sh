@@ -1,12 +1,14 @@
 #!/bin/bash
+#say-communicationのディレクトリを指定
 cd /Users/antibitch/Documents/job_hunting/internship/say-communication
-#今の時間言わせるsayコマンド
-#say `date +"%H"` 時 `date +"%M"` 分です
+
+
+source ./config
 
 #ごはん
-if test `date +"%H"` -eq 12;
+if test `date +"%H"` -eq `echo $TIME_GOHAN|cut -d":" -f1`;
   then
-  if test `date +"%M"` -eq 00;
+  if test `date +"%M"` -eq `echo $TIME_GOHAN|cut -d":" -f2`;
     then
       #メニューの配列をインポート
       source ./menu_array
@@ -16,20 +18,20 @@ if test `date +"%H"` -eq 12;
       KOTOBA2="${menu_array[$menu_random_num]}"
       KOTOBA3="tabeyo"
       osascript -e 'set Volume 4'
-      say -v Alex $KOTOBA1
+      say -v $SPEAKER $KOTOBA1
       osascript -e 'set Volume 6'
-      say -v Alex $KOTOBA2
+      say -v $SPEAKER $KOTOBA2
       osascript -e 'set Volume 4'
-      say -v Alex $KOTOBA3
+      say -v $SPEAKER $KOTOBA3
   fi
 fi
 
 #うなじ
-if test `date +"%H"` -eq 16;
+if test `date +"%H"` -eq `echo $TIME_UNAGI|cut -d":" -f1`;
   then
-  if test `date +"%M"` -eq 00;
+  if test `date +"%M"` -eq `echo $TIME_UNAGI|cut -d":" -f2`;
     then
-    say -v Alex This is wunagi time
+    say -v $SPEAKER This is wunagi time
     say -v Lets play wunagi
     open -a /Applications/Google\ Chrome.app http://eelslap.com/
   fi
@@ -37,12 +39,12 @@ fi
 
 #おはよう
 #10:00~10:59までにmacを開くとあいさつを行う
-if test `date +"%H"` -eq 14;
+if test `date +"%H"` -eq `echo $TIME_OHAYO|cut -d":" -f1`;
   then
   source ./hello_status
   if test $said_hello -eq 0;
     then
-    say -v Alex hello
+    say -v $SPEAKER hello
     echo said_hello=1 > ./hello_status
   fi
 fi
